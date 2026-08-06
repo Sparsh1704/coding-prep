@@ -30,15 +30,16 @@ int main(){
         int count = 0;
         for (int j = 0; j < C; j++){
             if (arr[i][j] == 1) count++;
-            if ( count > maxcount) {
-                maxcount = count;
-                rowindex = i+1;
-            }
+            
         }
+        if ( count > maxcount) {
+                maxcount = count;
+                rowindex = i;
+            }
         
     }
 
-    cout<<rowindex<<endl;
+    cout<<rowindex+1<<endl;
     return 0;
 
 }
