@@ -19,8 +19,8 @@ int main(){
     int R , C;
     cin>> R>>C;
     int arr[R][C];
-    int maxcount =-1;
-    int rowindex = 0;
+    int maxcount = 0;
+    int rowindex = -1;
     for(int i =0; i<R;i++){
         int count = 0;
         for(int j = 0;j < C; j++){
@@ -43,6 +43,7 @@ int main(){
     //             rowindex = i;
     //         }
     // }
-    cout<<rowindex+1<<endl;
+    if(rowindex != -1) rowindex++;
+    cout<<rowindex<<endl;
     return 0;
 }
