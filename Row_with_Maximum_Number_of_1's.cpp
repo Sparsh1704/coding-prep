@@ -19,27 +19,30 @@ int main(){
     int R , C;
     cin>> R>>C;
     int arr[R][C];
-    for(int i =0; i<R;i++){
-        for(int j = 0;j < C; j++){
-            cin>>arr[i][j];
-        }
-    }
     int maxcount =-1;
     int rowindex = 0;
-    for(int i = 0;i<R;i++){
+    for(int i =0; i<R;i++){
         int count = 0;
-        for (int j = 0; j < C; j++){
+        for(int j = 0;j < C; j++){
+            cin>>arr[i][j];
             if (arr[i][j] == 1) count++;
-            
         }
         if ( count > maxcount) {
-                maxcount = count;
-                rowindex = i;
-            }
-        
-    }
+            maxcount = count;
+            rowindex = i;
+        }
 
+    }
+    // for(int i = 0;i<R;i++){
+    //     int count = 0;
+    //     for (int j = 0; j < C; j++){
+    //         if (arr[i][j] == 1) count++;
+    //     }
+    //     if ( count > maxcount) {
+    //             maxcount = count;
+    //             rowindex = i;
+    //         }
+    // }
     cout<<rowindex+1<<endl;
     return 0;
-
 }
