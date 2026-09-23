@@ -8,8 +8,8 @@ int main(){
     string temp;
     while (getline(ss,temp,','))
     {
-        int num =stoi(temp);
-        arr.push_back(num);
+        //char num = temp;
+        arr.push_back(temp);
     }
     for (int a: arr){
         cout<<a<<" ";
